@@ -44,7 +44,7 @@ function addRecipesToDocument(recipes) {
 	for (let recipe in recipes)
 		{
 			let newRecipe = document.createElement("recipe-card")
-			newRecipe.data = recipe
+			newRecipe.data = recipes[recipe]
 			mainElement.append(newRecipe)
 		}
 }
