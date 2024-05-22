@@ -6,6 +6,9 @@ window.addEventListener("DOMContentLoaded", init);
 // Starts the program, all function calls trace back here
 function init() {
 	// Get the recipes from localStorage
+	if (!localStorage.getItem("recipes")) {
+		localStorage.setItem("recipes", '[]');
+	}
 	let recipes = getRecipesFromStorage();
 	// Add each recipe to the <main> element
 	addRecipesToDocument(recipes);
